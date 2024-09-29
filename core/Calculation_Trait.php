@@ -41,7 +41,7 @@ trait CalculationTrait
      * Compute declination angle of sun and equation of time
      *
      * @param double $jd
-     * @return double
+     * @return array
      */
     public function sunPosition($jd)
     {

@@ -39,7 +39,7 @@ trait CalendarTrait
      * @param int $month
      * @param int $day
      *
-     * @return int
+     * @return float
      */
     public function julianDate($year, $month, $day)
     {
@@ -58,10 +58,10 @@ trait CalendarTrait
     /**
      * Convert a calendar date to julian date (second method)
      *
-     * @param int $year
-     * @param int $month
-     * @param int $day
-     * @return int
+     * @param $year
+     * @param $month
+     * @param $day
+     * @return float
      */
     public function calcJD($year, $month, $day)
     {

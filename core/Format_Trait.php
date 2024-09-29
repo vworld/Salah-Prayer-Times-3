@@ -49,7 +49,8 @@ trait FormatTrait
      * @param string $userTimeZone
      * @param dateTime $date
      *
-     * @return type
+     * @return int
+     * @throws Exception
      */
     public function getOffset($userTimeZone, $dateTime = 'now')
     {
@@ -71,8 +72,8 @@ trait FormatTrait
     /**
      * Convert float hours to 24h format
      *
-     * @param timestamp $time
-     * @return timestamp
+     * @param int $time
+     * @return string
      */
     public function floatTotime24($time)
     {

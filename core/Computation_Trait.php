@@ -37,7 +37,7 @@ trait ComputationTrait
      * Compute prayer times at given julian date
      *
      * @param int $times
-     * @return int
+     * @return array
      */
     public function computeTimes($times)
     {
@@ -47,7 +47,7 @@ trait ComputationTrait
         $Sunrise = $this->computeTime(180- 0.833, $t[1]);
         $Dhuhr   = $this->computeMidDay($t[2]);
         $Asr     = $this->computeAsr(1+ $this->asrJuristic, $t[3]);
-        $Sunset  = $this->computeTime(0.833, $t[4]);;
+        $Sunset  = $this->computeTime(0.833, $t[4]);
         $Maghrib = $this->computeTime($this->methodParams[2], $t[5]);
         $Isha    = $this->computeTime($this->methodParams[4], $t[6]);
 
@@ -57,7 +57,7 @@ trait ComputationTrait
     /**
      * Compute prayer times at given julian date
      *
-     * @return int
+     * @return array
      */
     public function computeDayTimes()
     {
@@ -74,8 +74,8 @@ trait ComputationTrait
     /**
      * Adjust times in a prayer time array
      *
-     * @param int $times
-     * @return int
+     * @param array $times
+     * @return array
      */
     public function adjustTimes($times)
     {
@@ -100,8 +100,8 @@ trait ComputationTrait
     /**
      * Convert times array to given time format
      *
-     * @param int $times
-     * @return int
+     * @param array $times
+     * @return array
      */
     public function adjustTimesFormat($times)
     {
